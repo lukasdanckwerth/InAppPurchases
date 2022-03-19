@@ -17,6 +17,8 @@ public extension IAPViewController {
         guard isUserInterfaceEnabled else { return }
         guard !isLoading else { return }
         
+        debug_log("didSelectRowAt: \(indexPath)")
+        
         switch indexPath.section {
         case Sections.available:
             buy(indexPath: indexPath)

@@ -8,6 +8,15 @@
 
 import Foundation
 import StoreKit
+import os.log
+
+func debug_log(_ message: String) {
+    if #available(iOS 10.0, *) {
+        os_log("", log: OSLog.default, type: OSLogType.debug)
+    } else {
+        print("[InAppPurchases] \(message)")
+    }
+}
 
 extension IAPViewController: StoreManagerDelegate {
     
@@ -89,10 +98,12 @@ extension IAPViewController: StoreManagerDelegate {
     // MARK: - Restore
     
     public func restoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
+        debug_log("restoreCompletedTransactionsFinished: \(queue)")
         hideLoadingPurchases()
     }
     
     public func restoreCompletedTransactionsFailedWithError(_ error: SKError?) {
+        debug_log("restoreCompletedTransactionsFailedWithError: \(String(describing: error))")
         hideLoadingPurchases()
         presentAlert(
             title: NSLocalizedString("IAPViewController.RestoreError.Title", comment: ""),
@@ -102,6 +113,7 @@ extension IAPViewController: StoreManagerDelegate {
     }
     
     public func restoreCompletedTransactionsCanceled(_ error: SKError) {
+        debug_log("restoreCompletedTransactionsCanceled: \(String(describing: error))")
         hideLoadingPurchases()
     }
 }
