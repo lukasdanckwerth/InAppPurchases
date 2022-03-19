@@ -61,8 +61,11 @@ public protocol StoreManagerDelegate: AnyObject {
     ///
     func restoreCompletedTransactionsFinished(_ queue: SKPaymentQueue)
     
+    /// Tells the delegate that the restoration of the transation did failed with specified error.
+    ///
     func restoreCompletedTransactionsFailedWithError(_ error: SKError?)
     
-    func restoreCompletedTransactionsCanceled(_ error: SKError)
-    
+    /// Tells the delegate that the restoration of the transation was canceled by user with specified error.
+    ///
+    func restoreCompletedTransactionsCanceled(_ error: SKError)   
 }

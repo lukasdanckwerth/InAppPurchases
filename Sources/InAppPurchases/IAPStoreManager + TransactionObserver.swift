@@ -13,7 +13,6 @@ func executeAsync(execute: @escaping () -> Void) {
     DispatchQueue.main.async(execute: execute)
 }
 
-
 /// Extends StoreObserver to conform to SKPaymentTransactionObserver.
 ///
 extension IAPStoreManager: SKPaymentTransactionObserver {

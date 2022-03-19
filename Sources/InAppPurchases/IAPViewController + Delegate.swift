@@ -69,6 +69,10 @@ public extension IAPViewController {
         transactionDetails.data = data
         transactionDetails.title = IAPStoreManager.shared.title(matchingPaymentTransaction: paymentTransaction)
         
-        present(transactionDetails, animated: true)
+        if let navController = self.navigationController {
+            navController.pushViewController(transactionDetails, animated: true)
+        } else {
+            present(transactionDetails, animated: true)
+        }
     }
 }
