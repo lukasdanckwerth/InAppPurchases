@@ -47,7 +47,9 @@ public class IAPPaymentTransactionDetailsViewController: UITableViewController {
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case Sections.transaction | Sections.downloads:
+        case Sections.transaction:
+            return 3
+        case Sections.downloads:
             return 3
         case Sections.originalTransaction:
             return 2
