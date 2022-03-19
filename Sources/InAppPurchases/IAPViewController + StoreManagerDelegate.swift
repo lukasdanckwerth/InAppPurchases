@@ -12,7 +12,7 @@ import os.log
 
 func debug_log(_ message: String) {
     if #available(iOS 10.0, *) {
-        os_log("", log: OSLog.default, type: OSLogType.debug)
+        os_log("\(message)", log: OSLog.default, type: OSLogType.debug)
     } else {
         print("[InAppPurchases] \(message)")
     }
