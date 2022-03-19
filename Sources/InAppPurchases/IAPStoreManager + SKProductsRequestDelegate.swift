@@ -1,6 +1,6 @@
 //
 //  StoreManager + SKProductsRequestDelegate.swift
-//  
+//  InAppPurchases
 //
 //  Created by Lukas Danckwerth on 16.03.22.
 //

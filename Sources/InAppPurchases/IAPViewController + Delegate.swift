@@ -1,6 +1,6 @@
 //
 //  InAppPurchasesViewController + Delegate.swift
-//  Rima
+//  InAppPurchases
 //
 //  Created by Lukas Danckwerth on 10.01.21.
 //  Copyright © 2021 Lukas Danckwerth. All rights reserved.

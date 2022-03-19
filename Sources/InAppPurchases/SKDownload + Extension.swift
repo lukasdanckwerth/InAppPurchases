@@ -1,8 +1,9 @@
 //
-//  File.swift
-//  
+//  SKDownload + Extension.swift
+//  InAppPurchases
 //
 //  Created by Lukas Danckwerth on 16.03.22.
+//  Copyright © 2021 Lukas Danckwerth. All rights reserved.
 //
 
 import Foundation
